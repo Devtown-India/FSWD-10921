@@ -10,13 +10,26 @@
         span {
             color: blueviolet;
         }
+        
+        #block {
+            color: red;
+        }
+        
+        .orange {
+            color: orange;
+        }
     </style>
 </head>
 
 <body>
     <h1 style="color: red">I'm a heading</h1>
     <span>I'm a span</span>
-    <div>I'm a div</div>
+    <div id="block">I'm a div with id block</div>
+    <div class="orange">I'm a div with class orange</div>
+    <span class="orange">I'm a div with class orange</span>
+
+    <h1>Seniority Order</h1>
+    <h2>!important > Inline>ID selector > Class Selector > Element Selector</h2>
 </body>
 
 </html>
