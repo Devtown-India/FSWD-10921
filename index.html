@@ -15,49 +15,32 @@
             margin: 4px;
         }
         
-        h2 {
+        h2:nth-child(1) {
+            padding: 5px;
+            color: #f1f1f1;
+            background-color: cyan;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+        }
+        
+        h2:nth-child(2) {
             padding: 5px;
             color: #f1f1f1;
             background-color: #ffbf00;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in;
         }
         
         h2:hover {
             background-color: crimson;
             cursor: pointer;
         }
-        
-        div::selection {
-            background: lime;
-        }
-        
-        input:focus {
-            background-color: pink;
-            color: red;
-            font-size: 2rem;
-        }
-        
-        h2::after {
-            content: "I'm after";
-            font-size: 0.5rem;
-            color: red;
-            position: relative;
-        }
-        
-        h2::before {
-            content: "I'm before";
-            font-size: 0.5rem;
-            color: cyan;
-            position: relative;
-        }
     </style>
 </head>
 
 <body>
     <h2>I'm a heading</h2>
-    <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis cupiditate excepturi dolores eveniet quaerat at a tempora neque ea ipsam voluptatum pariatur sequi accusamus hic distinctio, esse quo beatae numquam.
-    </div>
-    <input type="text" />
+    <h2>I'm a heading</h2>
 </body>
 
 </html>
