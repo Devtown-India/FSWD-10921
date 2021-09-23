@@ -11,21 +11,53 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            font-family: Metropolis;
             margin: 4px;
         }
         
-        div.parent div {
-            background-color: lime;
+        h2 {
+            padding: 5px;
+            color: #f1f1f1;
+            background-color: #ffbf00;
+        }
+        
+        h2:hover {
+            background-color: crimson;
+            cursor: pointer;
+        }
+        
+        div::selection {
+            background: lime;
+        }
+        
+        input:focus {
+            background-color: pink;
+            color: red;
+            font-size: 2rem;
+        }
+        
+        h2::after {
+            content: "I'm after";
+            font-size: 0.5rem;
+            color: red;
+            position: relative;
+        }
+        
+        h2::before {
+            content: "I'm before";
+            font-size: 0.5rem;
+            color: cyan;
+            position: relative;
         }
     </style>
 </head>
 
 <body>
-    <div class="parent">
-        <div>i'm a first div</div>
-        <div>I'm a second div</div>
-        <div>I'm a second div</div>
+    <h2>I'm a heading</h2>
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis cupiditate excepturi dolores eveniet quaerat at a tempora neque ea ipsam voluptatum pariatur sequi accusamus hic distinctio, esse quo beatae numquam.
     </div>
+    <input type="text" />
 </body>
 
 </html>
