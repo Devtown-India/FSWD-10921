@@ -7,28 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Todo list</title>
-    <style></style>
+    <style>
+        div.parent {
+            display: flex;
+            align-items: stretch;
+            background-color: #111;
+            height: 100vh;
+        }
+        
+        div.child {
+            background-color: #ffbf00;
+            flex-basis: 80%;
+        }
+        
+        div.sidebar {
+            background-color: crimson;
+            flex-basis: 20%;
+        }
+        
+        @media (max-width: 550px) {
+            div.sidebar {
+                animation: 5s expand linear infinite;
+            }
+            div.child {
+                flex-basis: 100%;
+            }
+        }
+        
+        @keyframes expand {
+            0% {
+                flex-basis: 0%;
+            }
+            100% {
+                flex-basis: 50%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header></header>
-
-    <footer>
-        <div>
-            <a href="https://find-kartik-gupta.vercel.app/">Kartik Gupta</a>
-        </div>
-        <div>
-            <a href="#">
-                <img class="social" src="./assets/images/github.png" alt="" />
-            </a>
-            <a href="#">
-                <img class="social" src="./assets/images/instagram.png" alt="" />
-            </a>
-            <a href="#">
-                <img class="social" src="./assets/images/linkedin.png" alt="" />
-            </a>
-        </div>
-    </footer>
+    <div class="parent">
+        <div class="sidebar"></div>
+        <div class="child"></div>
+    </div>
 </body>
 
 </html>
