@@ -5,51 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>Todo list</title>
-    <style>
-        div.parent {
-            display: flex;
-            align-items: stretch;
-            background-color: #111;
-            height: 100vh;
-        }
-        
-        div.child {
-            background-color: #ffbf00;
-            flex-basis: 80%;
-        }
-        
-        div.sidebar {
-            background-color: crimson;
-            flex-basis: 20%;
-        }
-        
-        @media (max-width: 550px) {
-            div.sidebar {
-                animation: 5s expand linear infinite;
-            }
-            div.child {
-                flex-basis: 100%;
-            }
-        }
-        
-        @keyframes expand {
-            0% {
-                flex-basis: 0%;
-            }
-            100% {
-                flex-basis: 50%;
-            }
-        }
-    </style>
+    <title>JavaScript</title>
+    <script src="./app.js"></script>
 </head>
 
-<body>
-    <div class="parent">
-        <div class="sidebar"></div>
-        <div class="child"></div>
-    </div>
-</body>
+<body></body>
 
 </html>
