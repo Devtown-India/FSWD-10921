@@ -1,19 +1,19 @@
-// let response = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
-const list = document.querySelector('ul')
+const button = document.querySelector('button')
+const input = document.querySelector('input')
 
-
-
-let arr = ['One', 'Two', 'Three', 'Four']
-
-arr.forEach(chore => {
-    const element = document.createElement('li')
-    const textNode = document.createTextNode(chore)
-    element.appendChild(textNode)
-
-    element.addEventListener('click', (e) => {
-        const userInput = window.prompt(`Are you sure that you want to delete "${chore}"`)
-        if (userInput === 'YES') e.target.remove()
+const getData = async (item) => {
+    console.log(item)
+    let url = `https://api.edamam.com/search?app_id=bd51454f&app_key=3b359328e30cad3141319969dfedaba9&q=${item}`
+    console.log(url)
+    const res = await fetch(url)
+    const data = await res.json()
+    console.log()
+    data.hits.forEach(recipe => {
+        console.log(recipe)
     })
+}
 
-    list.appendChild(element)
+//  add event listener to the button
+button.addEventListener('click', (e) => {
+    getData(input.value)
 })
