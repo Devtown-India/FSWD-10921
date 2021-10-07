@@ -4,25 +4,30 @@
 <head>
     <title>JavaScript</title>
     <script defer src="./app.js"></script>
-    <style>
-        body {
-            background-color: black;
-        }
-        
-        .animate {
-            transform: translateX(100px);
-        }
-        
-        .dark {
-            background-color: black;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 
 <body>
     <input type="text" /> <button>Search</button>
-    <div></div>
+    <div class="cards">
+        <section class="section">
+            <div class="container">
+                <div class="grid">
+                    <article class="card">
+                        <img class="card__image" src="https://i.ibb.co/RT0bjJq/food1.png" />
+                        <div class="card__data">
+                            <div class="card__info">
+                                <h2>Nombre Comida</h2>
+                                <p>Descripcion de la comida, con ingredientes</p>
+                            </div>
+                            <h3 class="card__price">$7.50</h3>
+                            <button class="card__add">+</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
