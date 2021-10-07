@@ -20,13 +20,13 @@ const getData = async (item) => {
                                 <h2>${label}</h2>
                                 <p>From ${source}</p>
                             </div>
-                            <h3 class="card__price">${calories.toFixed(2)}</h3>
+                            <h3 class="card__price"></h3>
                             <button class="card__add">+</button>
                         </div>
                     `
         const newCard = document.createElement('article')
         newCard.setAttribute('class', 'card')
-        newCard.setAttribute('style', 'margin-bottom:50px')
+        newCard.setAttribute('style', 'margin-bottom:20px')
         newCard.innerHTML = template
         parent.appendChild(newCard)
     })
@@ -35,5 +35,6 @@ const getData = async (item) => {
 
 //  add event listener to the button
 but.addEventListener('click', (e) => {
+    parent.innerHTML = ''
     getData(getText.value)
 })
