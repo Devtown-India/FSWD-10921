@@ -61,7 +61,7 @@ router.post('/add', (req, res) => {
 
 
 /*
-ROUTE: http://localhost:3001/category/delete
+ROUTE: http://localhost:3001/category/delete/:id
 METHOD: DELETE
 */
 
@@ -92,5 +92,11 @@ router.delete('/delete/:id', (req, res) => {
         })
     }
 })
+
+
+/*
+ROUTE: http://localhost:3001/category/update/:id
+METHOD: PUT
+*/
 
 module.exports = router
