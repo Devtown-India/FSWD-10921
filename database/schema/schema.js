@@ -12,7 +12,7 @@ id: id
 Name : String
 */
 
-// order
+// Order
 /*
 Total Price: Number
 Product : Array of Products [Product_id]
