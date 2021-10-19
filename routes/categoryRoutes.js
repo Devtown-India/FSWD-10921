@@ -59,4 +59,38 @@ router.post('/add', (req, res) => {
 
 })
 
+
+/*
+ROUTE: http://localhost:3001/category/delete
+METHOD: DELETE
+*/
+
+router.delete('/delete/:id', (req, res) => {
+    try {
+
+
+        const { id } = req.params
+        // let element = database.categories.find(item => item.id === id)
+        // const index = database.categories.indexOf(element)
+        // database.categories.splice(index,1)
+
+        const newCategories = database.categories.filter(item => item.id !== id)
+        database.categories = newCategories
+        console.log(newCategories)
+
+        res.json({
+            categories: newCategories,
+            message: "Successfully removed category",
+            status: "SUCCESS"
+        })
+    } catch (error) {
+        console.log(error)
+        res.json({
+            categories: [],
+            message: error.message,
+            status: "FAILED"
+        })
+    }
+})
+
 module.exports = router
