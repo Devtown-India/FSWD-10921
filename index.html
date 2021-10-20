@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script defer src="./app.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+        #ISSloc {
+            height: 500px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <title>SpaceStation Location</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="heading">
+            Where &nbsp;&nbsp;is &nbsp;&nbsp;the&nbsp;&nbsp; ISS?
+        </h1>
+    </header>
+
+    <div class="container">
+        <div id="values">
+            <h3 class="data">
+                <span>Latitude : &nbsp;<span id="lat"></span> &deg;</span>
+            </h3>
+            <br />
+            <h3 class="data">
+                <span>Longitude : &nbsp;<span id="lon"></span> &deg;</span>
+            </h3>
+            <br />
+            <h3 class="data">
+                <span>Velocity : &nbsp;<span id="vel"></span></span>
+            </h3>
+        </div>
+
+        <div id="ISSloc"></div>
+    </div>
+</body>
+
+</html>

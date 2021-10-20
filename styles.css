@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai|Bangers|Monoton&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('./blue-and-white-planet-display-87009.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#ISSloc {
+    width: 700px;
+    float: right;
+    border: #6CA6C1 8px;
+    border-style: groove;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+#heading {
+    padding: 10px;
+    font-family: 'Monoton', cursive;
+    color: #6CA6C1;
+    font-size: 50px;
+    text-align: center;
+}
+
+#values {
+    width: 650px;
+    height: 200px;
+    color: #EAF6FF;
+    margin-top: 30px;
+}
+
+.data {
+    font-size: 30px;
+    color: #EAF6FF;
+    font-family: 'Monoton', cursive;
+}
+
+.container {
+    margin-left: 200px;
+    margin-top: 130px;
+    display: flex;
+    flex-direction: row;
+    border: #6CA6C1 solid 8px;
+    padding: 30px;
+    border-style: double;
+    border-radius: 10px;
+    margin-right: 180px;
+}
