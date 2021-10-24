@@ -71,20 +71,43 @@ router.post('/add', (req, res) => {
 
 })
 
+// router.post("/update", (req, res) => {
+//     let new_details = req.body;
+//     const { id } = new_details;
+//     let product = database.products.find((product) => product.id === id)
+//     let attributes = Object.keys(new_details);
+//     attributes.forEach((key) => {
+//         product[key] = new_details[key];
+//     })
+//     console.log(product)
+//     try {
+//         res.status(200).json({
+//             products: database.products,
+//             message: "product updated successfully",
+//             status: "SUCCESS"
+//         })
+//     }
+//     catch (error) {
+//         res.status(200).json({
+//             products: [],
+//             message: error.message,
+//             status: "FAILED"
+//         })
+//     }
+// })
+
+
 router.post("/update", (req, res) => {
     let new_details = req.body;
     const { id } = new_details;
-    let product = database.products.find((product) => product.id === id)
-
+    var product = database.products.find(element => element.id === id);
     let attributes = Object.keys(new_details);
     attributes.forEach((key) => {
-        // console.log(product[key], new_details[key])
         product[key] = new_details[key];
     })
-    console.log(product)
     try {
         res.status(200).json({
-            products: database.products,
+            products: product,
             message: "product updated successfully",
             status: "SUCCESS"
         })
