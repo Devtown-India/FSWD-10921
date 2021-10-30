@@ -1,11 +1,20 @@
+import Navbar from './layouts/Navbar'
+import Footer from './layouts/Footer'
+import Content from './components/Content'
 
-function App() {
+
+const App = () => {
 
   return (
     <div className="App">
-      Lorem ipsum dolor, sit amet consectetur98898
-    </div>
+      <Navbar />
+      <Content />
+      <Footer />
+    </div >
   );
 }
 
+
+
 export default App;
+
