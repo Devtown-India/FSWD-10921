@@ -1,16 +1,27 @@
+import { useState } from 'react'
+
 const Content = () => {
 
-    const chores = ["item 1", "item 2", "item 3", "item 4"]
+    const [items, setItems] = useState([])
+    const [value, setValue] = useState('')
+
+    const handleSubmit = () => {
+        setItems(prev => [...prev, value])
+    }
+
+    const handleInput = (e) => {
+        setValue(e.target.value)
+    }
 
     return (
-
-        <div className="container">
+        <>
+            <h2>Todo</h2>
+            <input onChange={handleInput} type="text" />
+            <button onClick={handleSubmit} type="submit">Add</button>
             <ul>
-                {
-                    chores.map(chore => <li>{chore}</li>)
-                }
+                {items.map(item => <li>{item}</li>)}
             </ul>
-        </div>
+        </>
     );
 }
 
