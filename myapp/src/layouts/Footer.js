@@ -5,7 +5,6 @@ const Footer = () => {
             <a href="#">Instagram</a>
             <a href="#">Twitter</a>
             <a href="#">Linkedin</a>
-
         </footer>
     );
 }

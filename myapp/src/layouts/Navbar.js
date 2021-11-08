@@ -1,9 +1,10 @@
-const Navbar = () => {
+
+const Navbar = ({ }) => {
     return (
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="#">Calculator</a>
+            <a href="#">Timer</a>
+            <a href="#">Tap</a>
         </nav>
     );
 }

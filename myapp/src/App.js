@@ -1,15 +1,21 @@
+import { useState } from 'react'
+import Calculator from './components/Calculator';
+
 import Navbar from './layouts/Navbar'
-import Footer from './layouts/Footer'
-import Content from './components/Content'
+import Info from './components/Info';
+import Timer from './components/Timer';
+import Tap from './components/Tap'
+
 
 
 const App = () => {
-
   return (
     <div className="App">
-      {/* <Navbar /> */}
-      <Content />
-      {/* <Footer /> */}
+      <Navbar />
+      <Info />
+      <Timer />
+      <Calculator />
+      <Tap />
     </div >
   );
 }
