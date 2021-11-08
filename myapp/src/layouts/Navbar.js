@@ -1,10 +1,12 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 
-const Navbar = ({ }) => {
+const Navbar = ({ setcurrentComp }) => {
+
     return (
         <nav>
-            <a href="#">Calculator</a>
-            <a href="#">Timer</a>
-            <a href="#">Tap</a>
+            <a onClick={() => { setcurrentComp('calculator') }} href="#">Calculator</a>
+            <a onClick={() => { setcurrentComp('timer') }} href="#">Timer</a>
+            <a onClick={() => { setcurrentComp('tap') }} href="#">Tap</a>
         </nav>
     );
 }
