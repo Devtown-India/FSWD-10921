@@ -1,12 +1,20 @@
 import { useState } from 'react';
-import One from './components/One';
+import Products from './components/Products'
+import Details from './components/Details'
+import Navbar from './layout/Navbar'
+import { Routes, Route } from 'react-router-dom'
 
 
 const App = () => {
 
+
   return (
     <div>
-      <One />
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Products />} />
+        <Route path='/product/:name' element={<Details />} />
+      </Routes>
     </div>
   );
 }
