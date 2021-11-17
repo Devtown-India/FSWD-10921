@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600,700,800,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .news-input {
+        width: 50%;
+    }
+}
+
+.carousel-nav-icon {
+    height: 48px;
+    width: 48px;
+}
+
+.carousel-item .col,
+.carousel-item .col-sm,
+.carousel-item .col-md {
+    margin: 8px;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+}
